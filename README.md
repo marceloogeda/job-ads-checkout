@@ -9,6 +9,8 @@ That's the new job ads checkout system written in ReactJS + Redux + GraphQL.
 
 ## Getting Started
 
+No needs for installing dependencies.
+
 #### Prerequisites
 
 - [Docker](https://www.docker.com/get-docker)

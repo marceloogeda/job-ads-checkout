@@ -4,27 +4,24 @@ Client application for the new job ads checkout system.
 
 ## Getting Started
 
-No needs for installing dependencies.
-
-```sh
-cd ../
-./start.sh
-```
-
-## Installing
-
 ### Prerequisites
 
 * [Git](https://git-scm.com/)
 * [Nodejs](https://nodejs.org/en/)
 
-## Setup
-
 ```sh
 git clone https://github.com/marceloogeda/job-ads-checkout.git
 cd job-ads-checkout/client
-npm i or yarn
 ```
+
+## Setup
+
+```sh
+npm i or yarn
+npm start or yarn start
+```
+
+Open [localhost:3000](http://localhost:3000) for local development.  
 
 ## Folder Structure
 
@@ -49,18 +46,18 @@ client/               # if you don't change the local project name
 
 ## Available Scripts
 
-#### `yarn start`
+#### `yarn start` or `npm start`
 
 Runs the app in development mode.
 
-#### `yarn test`
+#### `yarn test` or `npm test`
 
 Runs the test watcher in an interactive mode.
 
-#### `yarn flow`
+#### `yarn flow` or `npm flow`
 
 Runs the flow to static type checker.
 
-#### `yarn run build`
+#### `yarn run build` or `npm run build`
 
 Builds the app for production to the build folder.
