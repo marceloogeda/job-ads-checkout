@@ -57,6 +57,10 @@ Runs the app in development mode.
 
 Runs the test watcher in an interactive mode.
 
+#### `yarn flow`
+
+Runs the flow to static type checker.
+
 #### `yarn run build`
 
 Builds the app for production to the build folder.
