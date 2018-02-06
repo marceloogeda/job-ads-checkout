@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`# Header should render correctly 1`] = `
+<header
+  className="sc-bdVaJa ervVcD"
+>
+  <div
+    className="Grid-iUdnzb huLnVS"
+  >
+    <div
+      className="Row-ciskzD gWlJeB"
+    >
+      <div
+        className="Col-jCOnJH eEidFm"
+      >
+        <img
+          alt="global delivery pod"
+          src="gdp.png"
+          width={110}
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;

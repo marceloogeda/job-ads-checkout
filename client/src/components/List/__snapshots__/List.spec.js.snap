@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`# List should render a empty list 1`] = `
+<ul
+  className="sc-bwzfXH iCGSIH"
+/>
+`;
+
+exports[`# List should render correctly 1`] = `
+<ul
+  className="sc-bwzfXH iCGSIH"
+>
+  <li
+    className="sc-bdVaJa hnOvng"
+  >
+    1
+  </li>
+  <li
+    className="sc-bdVaJa hnOvng"
+  >
+    2
+  </li>
+  <li
+    className="sc-bdVaJa hnOvng"
+  >
+    3
+  </li>
+  <li
+    className="sc-bdVaJa hnOvng"
+  >
+    4
+  </li>
+  <li
+    className="sc-bdVaJa hnOvng"
+  >
+    5
+  </li>
+</ul>
+`;

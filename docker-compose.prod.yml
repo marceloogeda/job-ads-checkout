@@ -1,0 +1,29 @@
+version: '3'
+services:
+    nginx:
+        build:
+            dockerfile: ./docker/nginx.dockerfile
+            context: .
+        image: gdp/nginx
+        container_name: nginx
+        ports:
+            - "80:80"
+        networks:
+            - gdp-network
+        depends_on:
+            - "node"
+
+    node:
+        build:
+            dockerfile: ./docker/node.dockerfile
+            context: .
+        image: gdp/node
+        container_name: node
+        ports:
+            - "5000:5000"
+        networks:
+            - gdp-network
+
+networks:
+    gdp-network:
+        driver: bridge

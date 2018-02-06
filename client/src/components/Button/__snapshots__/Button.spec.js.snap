@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`# Button should render correctly 1`] = `
+<button
+  className="sc-bdVaJa dvBwmY"
+  color="#eeeeee"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Click here
+</button>
+`;

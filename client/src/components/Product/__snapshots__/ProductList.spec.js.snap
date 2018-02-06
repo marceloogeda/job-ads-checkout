@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`# Product should render correctly 1`] = `
+<div
+  className="sc-bwzfXH ccgmOf"
+>
+  <span
+    className="sc-EHOje epucfV"
+  >
+    <span
+      className="sc-ifAKCX cGPonp"
+    >
+      $
+    </span>
+    <span
+      className="sc-bZQynM jGRKHg"
+    >
+       / per ad
+    </span>
+  </span>
+  <h1
+    className="sc-htpNat efAdPk"
+  >
+    Product1
+  </h1>
+  <p
+    className="sc-bxivhb cAxnzx"
+  >
+    Lorem...
+  </p>
+  <button
+    className="sc-bdVaJa dTKOxN"
+    color="#0d3880"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Add to order
+  </button>
+</div>
+`;

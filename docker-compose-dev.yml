@@ -1,0 +1,33 @@
+version: '3'
+services:
+    node-client:
+        build:
+            dockerfile: ./docker/client.dockerfile
+            context: .
+        image: gdp/node-client
+        volumes:
+            - ./client/:/usr/src/app/
+        container_name: container-node-client
+        ports:
+            - "3000:3000"
+        networks:
+            - gdp-network
+        depends_on:
+            - "node-server"
+
+    node-server:
+        build:
+            dockerfile: ./docker/server.dockerfile
+            context: .
+        image: gdp/node-server
+        volumes:
+            - ./server/:/usr/src/app/
+        container_name: container-node-server
+        ports:
+            - "5000:5000"
+        networks:
+            - gdp-network
+
+networks:
+    gdp-network:
+        driver: bridge

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`# Text should render a HTMLHeadingElement correctly 1`] = `
+<h1
+  className="sc-bdVaJa hQJWqK"
+>
+  Seek - Job Ads
+</h1>
+`;
+
+exports[`# Text should render a HTMLParagraphElement correctly 1`] = `
+<p
+  className="sc-bwzfXH iiFAtu"
+>
+  Seek - Job Ads
+</p>
+`;
+
+exports[`# Text should render a HTMLSpanElement correctly 1`] = `
+<span
+  className="sc-htpNat dUUasM"
+>
+  Seek - Job Ads
+</span>
+`;
