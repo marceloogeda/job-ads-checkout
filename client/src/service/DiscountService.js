@@ -9,7 +9,7 @@ export default class DiscountService {
   product: Product;
   discount: number = 0;
 
-  constructor(discounts: Discounts, orders: Orders) {
+  constructor(discounts: Discounts, orders: Orders = []) {
     this.discounts = discounts;
     this.orders = orders;
   }

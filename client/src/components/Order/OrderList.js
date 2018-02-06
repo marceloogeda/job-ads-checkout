@@ -14,17 +14,20 @@ import Text from './../Text/Text';
 
 // Service
 import CheckoutService from './../../service/CheckoutService';
+import DiscountService from './../../service/DiscountService';
 
 // Types
 import type { Node } from 'react';
 import type { Dispatch } from '../../types/';
 import type { Orders } from './../../types/orders';
+import type { PricingRuleState } from './../../types/pricingRule';
 
 // Theme
 import { colors } from './../../theme/palette';
 
 type OrderListProps = {
   orders: Orders,
+  pricingRule: PricingRuleState,
   handleOnClick: (key: number) => Dispatch
 };
 
@@ -39,10 +42,11 @@ const CloseButton = styled.span`
 `;
 
 const mapStateToProps = state => {
-  const { orders } = state;
+  const { orders, pricingRule } = state;
 
   return {
-    orders
+    orders,
+    pricingRule
   };
 };
 
@@ -51,6 +55,19 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
 });
 
 class OrderList extends Component<OrderListProps> {
+  renderTotal(checkoutService, orders) {
+    const { pricingRule } = this.props;
+    const discounts =
+      'discounts' in pricingRule.payload ? pricingRule.payload.discounts : [];
+
+    const discountService = new DiscountService(discounts);
+    orders.forEach(order => discountService.add(order));
+
+    return (checkoutService.getTotal() - discountService.getDiscount()).toFixed(
+      2
+    );
+  }
+
   renderOrderItem = (): Node => {
     const { handleOnClick, orders } = this.props;
     const ordersIds = _.groupBy(orders, 'id');
@@ -69,7 +86,7 @@ class OrderList extends Component<OrderListProps> {
               <MdClear />
             </CloseButton>
           </Text>
-          <Text>${checkoutService.getTotal()}</Text>
+          <Text>${this.renderTotal(checkoutService, orders)}</Text>
         </List.Item>
       );
     });
@@ -91,7 +108,7 @@ class OrderList extends Component<OrderListProps> {
             footer={
               <List.Item bordered>
                 <Text>Total:</Text>
-                <Text>${checkoutService.getTotal(orders)}</Text>
+                <Text>${this.renderTotal(checkoutService, orders)}</Text>
               </List.Item>
             }
           />

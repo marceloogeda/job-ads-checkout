@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 // Actions
-import { addProduct } from './../../actions/order';
+import { addItem } from './../../actions/order';
 
 // Components
 import Button from './../Button/Button';
@@ -103,7 +103,7 @@ class ProductList extends Component<ProductListProps, State> {
           {this.renderPrice(product)}
           <Text.Heading>{product.name}</Text.Heading>
           <Text.Paragraph>{product.description}</Text.Paragraph>
-          <Button type="primary" onClick={() => dispatch(addProduct(product))}>
+          <Button type="primary" onClick={() => dispatch(addItem(product))}>
             Add to order
           </Button>
         </Card>
