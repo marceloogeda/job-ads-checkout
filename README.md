@@ -22,6 +22,18 @@ chmod +x start.sh
 ./start.sh
 ```
 
+Open [localhost:3000](http://localhost:3000) for local development of the client.  
+Open [localhost:5000/graphql](http://localhost:5000/graphql) for local development of the server.
+
+###### Customer versions
+
+- [Unilever](http://localhost:3000?customerId=unilever);
+- [Apple](http://localhost:3000?customerId=apple);
+- [Nike](http://localhost:3000?customerId=nike);
+- [Ford](http://localhost:3000?customerId=ford);
+- [Default](http://localhost:3000);
+
+
 #### Run tests!
 
 Unfortunately the tests are still not running inside the docker :trollface:
