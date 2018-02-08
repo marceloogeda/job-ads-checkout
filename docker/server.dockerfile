@@ -4,5 +4,5 @@ ENV NODE_ENV=development
 COPY ./server/ /var/www
 WORKDIR /var/www
 RUN npm install
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]
 EXPOSE 5000
