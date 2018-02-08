@@ -6,7 +6,7 @@ services:
             context: .
         image: gdp/node-client
         volumes:
-            - ./client/:/usr/src/app/
+            - ${PWD}/client/:/var/www
         container_name: container-node-client
         ports:
             - "3000:3000"
@@ -14,6 +14,7 @@ services:
             - gdp-network
         depends_on:
             - "node-server"
+        command: bash -c "npm install && npm start"
 
     node-server:
         build:
@@ -21,12 +22,13 @@ services:
             context: .
         image: gdp/node-server
         volumes:
-            - ./server/:/usr/src/app/
+            - ${PWD}/server/:/var/www
         container_name: container-node-server
         ports:
             - "5000:5000"
         networks:
             - gdp-network
+        command: bash -c "npm install && npm start"
 
 networks:
     gdp-network:
